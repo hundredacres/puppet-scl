@@ -22,5 +22,5 @@ class scl (
   contain ::scl::install
   contain ::scl::config
 
-  Class['::scl::install'] -> Class['::scl::config']
+  #Class['::scl::install'] -> Class['::scl::config']
 }
