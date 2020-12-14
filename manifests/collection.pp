@@ -24,9 +24,9 @@ define scl::collection (
     fail('You must include the scl base class before using any scl defined resources')
   }
 
-  package { $collection:
+  ensure_packages( $collection, {
     ensure => $ensure,
-  }
+  })
 
   if $ensure == 'present' and $enable {
     file { "/etc/profile.d/scl-${collection}.sh":
